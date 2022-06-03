@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Gaming.Xbox.Scarlett.x64">
+      <Configuration>Debug</Configuration>
+      <Platform>Gaming.Xbox.Scarlett.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Gaming.Xbox.Scarlett.x64">
+      <Configuration>Profile</Configuration>
+      <Platform>Gaming.Xbox.Scarlett.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Gaming.Xbox.Scarlett.x64">
+      <Configuration>Release</Configuration>
+      <Platform>Gaming.Xbox.Scarlett.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Gaming.Xbox.XboxOne.x64">
+      <Configuration>Release</Configuration>
+      <Platform>Gaming.Xbox.XboxOne.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Gaming.Xbox.XboxOne.x64">
+      <Configuration>Profile</Configuration>
+      <Platform>Gaming.Xbox.XboxOne.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Gaming.Xbox.XboxOne.x64">
+      <Configuration>Debug</Configuration>
+      <Platform>Gaming.Xbox.XboxOne.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Gaming.Desktop.x64">
+      <Configuration>Release</Configuration>
+      <Platform>Gaming.Desktop.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Gaming.Desktop.x64">
+      <Configuration>Profile</Configuration>
+      <Platform>Gaming.Desktop.x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Gaming.Desktop.x64">
+      <Configuration>Debug</Configuration>
+      <Platform>Gaming.Desktop.x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>PlayFabStore</RootNamespace>
+    <ProjectGuid>{138755ca-9edb-413b-98b8-d13abc33559a}</ProjectGuid>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <Keyword>Win32Proj</Keyword>
+    <!-- - - - -->
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <TargetRuntime>Native</TargetRuntime>
+    <GDKExtLibNames>Xbox.Services.API.C;Xbox.XCurl.API</GDKExtLibNames>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Condition="Exists($(ATGBuildProps))" Project="$(ATGBuildProps)" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.XboxOne.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.Scarlett.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.XboxOne.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.Scarlett.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.XboxOne.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.Scarlett.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Desktop.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Desktop.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Desktop.x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="..\..\..\Kits\UITK\UITK.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.XboxOne.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.Scarlett.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.XboxOne.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.Scarlett.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.XboxOne.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.Scarlett.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Desktop.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Desktop.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Desktop.x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.XboxOne.x64'">
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.Scarlett.x64'">
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.XboxOne.x64'">
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.Scarlett.x64'">
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.XboxOne.x64'">
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.Scarlett.x64'">
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Desktop.x64'">
+    <LibraryPath>$(Console_SdkLibPath);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(Console_SdkIncludeRoot);$(IncludePath)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Desktop.x64'">
+    <LibraryPath>$(Console_SdkLibPath);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(Console_SdkIncludeRoot);$(IncludePath)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Desktop.x64'">
+    <LibraryPath>$(Console_SdkLibPath);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(Console_SdkIncludeRoot);$(IncludePath)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.XboxOne.x64'">
+    <Link>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(XboxExtensionsDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories />
+      <ForcedUsingFiles />
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.Scarlett.x64'">
+    <Link>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(XboxExtensionsDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <ForcedUsingFiles>
+      </ForcedUsingFiles>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.XboxOne.x64'">
+    <Link>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(XboxExtensionsDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories />
+      <ForcedUsingFiles />
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;NDEBUG;PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.Scarlett.x64'">
+    <Link>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(XboxExtensionsDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <ForcedUsingFiles>
+      </ForcedUsingFiles>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;NDEBUG;PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.XboxOne.x64'">
+    <Link>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(XboxExtensionsDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories />
+      <ForcedUsingFiles />
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.Scarlett.x64'">
+    <Link>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(XboxExtensionsDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <ForcedUsingFiles>
+      </ForcedUsingFiles>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Desktop.x64'">
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;NDEBUG;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <FXCompile>
+      <ShaderModel>5.1</ShaderModel>
+    </FXCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Desktop.x64'">
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>uuid.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;$(Console_Libs);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;NDEBUG;__WRL_NO_DEFAULT_LIB__;PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <FXCompile>
+      <ShaderModel>5.1</ShaderModel>
+    </FXCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Desktop.x64'">
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>uuid.lib;$(Console_Libs);..\..\..\Kits\PlayFabGDK\lib\$(Platform)\v141\$(Configuration)\lib_json.lib;..\..\..\Kits\PlayFabGDK\lib\$(PlatformName)\v141\$(Configuration)\XPlatCppGdk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>$(ProjectDir);..\..\..\Kits\LiveTK;..\..\..\Kits\DirectXTK12\Inc;..\..\..\Kits\ATGTK;..\..\..\Kits\ATGTelemetry\GDK;..\..\..\Kits\PlayFabGDK;..\..\..\Kits\PlayFabGDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ATG_ENABLE_TELEMETRY;_DEBUG;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <FXCompile>
+      <ShaderModel>5.1</ShaderModel>
+    </FXCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <CopyFileToFolders>
+      <DestinationFolders>$(OutDir)Assets</DestinationFolders>
+    </CopyFileToFolders>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\allocator.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\assertions.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\autolink.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\config.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\features.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\forwards.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\json.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\reader.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\value.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\version.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\json\writer.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAdminApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAdminDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAdminInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAndroidHttpPlugin.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabApiSettings.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAuthenticationApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAuthenticationContext.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAuthenticationDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabAuthenticationInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabBaseModel.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabCallRequestContainer.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabCallRequestContainerBase.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabClientApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabClientDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabClientInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabCloudScriptApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabCloudScriptDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabCloudScriptInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabCurlHttpPlugin.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabDataApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabDataDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabDataInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabError.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEvent.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEventApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEventBuffer.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEventPipeline.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEventRouter.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEventsApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEventsDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabEventsInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabExperimentationApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabExperimentationDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabExperimentationInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabGroupsApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabGroupsDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabGroupsInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabInsightsApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabInsightsDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabInsightsInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabIOSHttpPlugin.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabIXHR2HttpPlugin.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabIXHR2HttpRequest.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabJsonHeaders.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabLocalizationApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabLocalizationDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabLocalizationInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabMatchmakerApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabMatchmakerDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabMatchmakerInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabMultiplayerApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabMultiplayerDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabMultiplayerInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabPlatformMacros.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabPlatformTypes.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabPlatformUtils.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabPluginManager.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabProfilesApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabProfilesDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabProfilesInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabServerApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabServerDataModels.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabServerInstanceApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabSettings.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabSpinLock.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabTransportHeaders.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\PlayFabWinHttpPlugin.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\QoS\PingResult.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\QoS\PlayFabQoSApi.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\QoS\QoS.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\QoS\QoSResult.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\QoS\QoSSocket.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\QoS\RegionResult.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\include\playfab\QoS\XPlatSocket.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Kits\LiveTK\LiveInfoHUD.h" />
+    <ClInclude Include="..\..\..\Kits\LiveTK\LiveResources.h" />
+    <ClInclude Include="..\..\..\Kits\ATGTK\StringUtil.h" />
+    <ClInclude Include="..\..\..\Kits\ATGTK\Json.h" />
+    <ClInclude Include="..\..\..\Kits\ATGTK\json\json.hpp" />
+    <ClInclude Include="..\..\..\Kits\ATGTK\ATGColors.h" />
+    <ClInclude Include="..\..\..\Kits\ATGTK\d3dx12.h" />
+    <ClInclude Include="..\..\..\Kits\ATGTK\FindMedia.h" />
+    <ClInclude Include="..\..\..\Kits\ATGTelemetry\GDK\ATGTelemetry.h" />
+    <ClInclude Include="..\..\..\Kits\PlayFabGDK\PlayFabResources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PlayFabStore.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="StepTimer.h" />
+    <ClInclude Include="DeviceResources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Kits\LiveTK\LiveInfoHUD.cpp" />
+    <ClCompile Include="..\..\..\Kits\LiveTK\LiveResources.cpp" />
+    <ClCompile Include="..\..\..\Kits\ATGTK\StringUtil.cpp" />
+    <ClCompile Include="..\..\..\Kits\ATGTK\Texture.cpp" />
+    <ClCompile Include="..\..\..\Kits\ATGTelemetry\GDK\ATGTelemetry.cpp" />
+    <ClCompile Include="..\..\..\Kits\PlayFabGDK\PlayFabResources.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PlayFabStore.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="DeviceResources.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MGCCompile Include="MicrosoftGame.Config">
+      <SubType>Designer</SubType>
+    </MGCCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\..\..\Media\Textures\GamerPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\Courier_16.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\Courier_36.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_18.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_18_Bold.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_18_Italic.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_22.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_22_Bold.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_22_Italic.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_24.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_24_Bold.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_24_Italic.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_36.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_36_Bold.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\SegoeUI_36_Italic.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\XboxOneController.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\XboxOneControllerLegend.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\XboxOneControllerLegendSmall.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\..\Media\Fonts\XboxOneControllerSmall.spritefont">
+      <DeploymentContent>true</DeploymentContent>
+      <DestinationFileName>Fonts\%(Filename)%(Extension)</DestinationFileName>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Assets\UI\consolewindow.json" />
+    <CopyFileToFolders Include="Assets\UI\defs.json" />
+    <CopyFileToFolders Include="Assets\UI\menuitem.json" />
+    <CopyFileToFolders Include="Assets\UI\slider.json" />
+    <CopyFileToFolders Include="Assets\UI\styles.json" />
+    <CopyFileToFolders Include="Assets\UI\UILayout.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\Logo.png" />
+    <CopyFileToFolders Include="Assets\LargeLogo.png" />
+    <CopyFileToFolders Include="Assets\SmallLogo.png" />
+    <CopyFileToFolders Include="Assets\SplashScreen.png" />
+    <CopyFileToFolders Include="Assets\StoreLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\button.png" />
+    <CopyFileToFolders Include="Assets\LOGO_ATG.png" />
+    <CopyFileToFolders Include="Assets\scrollbarbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Debug\lib_json.pdb" />
+    <None Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Debug\XPlatCppGdk.pdb" />
+    <None Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Debug\lib_json.pdb" />
+    <None Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Debug\XPlatCppGdk.pdb" />
+    <None Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Debug\lib_json.pdb" />
+    <None Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Debug\XPlatCppGdk.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Debug\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Debug\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Profile\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Profile\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Release\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Desktop.x64\v141\Release\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+        <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Debug\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Debug\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Profile\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Profile\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Release\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.Scarlett.x64\v141\Release\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Debug\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Debug\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Profile\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Profile\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Release\lib_json.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\..\Kits\PlayFabGDK\lib\Gaming.Xbox.XboxOne.x64\v141\Release\XPlatCppGdk.lib">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PlayFabStore.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_potion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_bow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_archer_bundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_coins_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_coins_medium.png" />
+    <CopyFileToFolders Include="Assets\UI\icon_coins_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_crate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_doused_potions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_drowning_potions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_knight_bundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_splash_potions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\icon_sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Assets\UI\Logo_Playfab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Kits\DirectXTK12\DirectXTK12_GDK_2019.vcxproj">
+      <Project>{052c4858-c76f-4cea-8a1a-e8e5559e67c2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
